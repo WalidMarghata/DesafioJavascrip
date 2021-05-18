@@ -1,0 +1,115 @@
+<html>
+
+<head>
+	<title>Desafio</title>
+</head>
+
+<body>
+	<h2>Desafio Javascript</h2>
+	<p>CPF: <input type="number" id="txtCPF" name="txtName" maxlength="11" />
+		NOME: <input type="text" id="txtNome" name="txtNome" />
+		<input type="button" id="buttonAdicionar" value="Adicionar" onclick="AdicionarLinha()" />
+	</p>
+
+	<table id="tabelaClientes" name="tabelaClientes" border="1">
+		<tr>
+			<td><strong>CPF</strong></td>
+			<td><strong>NOME</strong></td>
+			<td><strong>REMOVER</strong></td>
+		</tr>
+	</table>
+</body>
+<script>
+	var arrayTabela = [];
+
+	function AdicionarLinha()
+	{
+			var cpf = document.getElementById("txtCPF").value;
+
+		var nome = document.getElementById("txtNome").value;
+
+		if (nome == "" || cpf == "") {
+			window.alert("Insira um valor possivel!");
+		}
+		else {
+
+			var tabela =
+			{
+				"id": arrayTabela.length,
+				"nome": nome,
+				"cpf": cpf
+			}
+
+			arrayTabela.push(tabela);
+			console.log(arrayTabela);
+			console.log(arrayTabela.length);
+
+			for (let i = 0; i < (arrayTabela.length - 1); i++) {
+				var cpfTabela = tabela.cpf;
+				var cpfArray = arrayTabela[i].cpf;
+				var nomeTabela = tabela.nome;
+				var nomeArray = arrayTabela[i].nome;
+
+				if (cpfTabela == cpfArray) {
+					window.alert("Ja existe um nome com esse CPF cadastrado!");
+					arrayTabela.pop();
+					break;
+				}
+
+				if (nomeTabela == nomeArray) {
+					window.alert("Ja existe um nome como esse cadastrado!");
+					arrayTabela.pop();
+				}
+			}
+
+			document.getElementById("tabelaClientes").innerHTML = constroiTabela();	
+		}		
+	}
+
+	function RemoverLinha(idLinha)
+	{
+		arrayTabela.splice(idLinha, 1);
+		document.getElementById("linhaRemover" + idLinha).remove();
+		console.log(arrayTabela);
+		document.getElementById("tabelaClientes").innerHTML = constroiTabela();	
+	}
+	
+	function constroiTabela() {
+		var tabelaScript = "<tr>" +                                               // <- variavel para construir o cabecario
+								"<td>" +
+									"<strong>" +
+										"CPF" +
+									"</strong>" +
+								"</td>" +
+								"<td>" +
+									"<strong>" +
+										"NOME" +
+									"</strong>" +
+								"</td>" +
+								"<td>" +
+									"<strong>" +
+										"REMOVER" +
+									"<strong>" +
+								"</td>" +
+							"</tr>";
+
+		for (let i = 0; i < arrayTabela.length; i++) {
+			tabelaScript += "<tr id='linhaRemover" + i + "'>" +											 // <- variavel para construir a tabela
+								"<td>" +
+									arrayTabela[i].cpf +
+								"</td>" +
+								"<td>" +
+									arrayTabela[i].nome +
+								"</td>" +
+								"<td>" +
+									"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
+								"</td>"
+							"</tr>";
+		}
+
+		return tabelaScript;
+	}
+	
+</script>
+
+</html>

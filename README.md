@@ -15,6 +15,9 @@
 HTML:
 
 
+**Esse trecho do código é o HMTL da página. ele mostra a criacao duas caixas com nome e cpf para receber valores e tem tambem um botão de "adicionar".**
+
+
 	<head>
 		<title>Desafio</title>
 	</head>
@@ -36,7 +39,6 @@ HTML:
 		</table>
 	</body>
   
-   **Esse trecho do código é o HMTL da página. ele mostra a criacao duas caixas com nome e cpf para receber valores e tem tambem um botão de "adicionar".**
 
  
  ![img](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsiT6IVZqxwjYFgAdhl8PeiYtcAo7mTAOEqg&usqp=CAU)     

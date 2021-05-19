@@ -15,7 +15,7 @@
 HTML:
 
 
-**Esse código é o HMTL da página e nele mostra a criação duas caixas com nome e cpf para receber valores e tem tambem um botão de "adicionar".**
+**Esse código é o HMTL da página e nele mostra a criação de duas caixas com nome e cpf para receber valores e também um botão de "adicionar".**
 
 
 	<head>

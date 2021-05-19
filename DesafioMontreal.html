@@ -43,6 +43,9 @@
 			arrayTabela.push(tabela);
 			console.log(arrayTabela);
 			console.log(arrayTabela.length);
+			
+			var jaValidou = false;
+
 
 			for (let i = 0; i < (arrayTabela.length - 1); i++) {
 				var cpfTabela = tabela.cpf;
@@ -51,15 +54,22 @@
 				var nomeArray = arrayTabela[i].nome;
 
 				if (cpfTabela == cpfArray) {
+					jaValidou = true;
 					window.alert("Ja existe um nome com esse CPF cadastrado!");
 					arrayTabela.pop();
 					break;
 				}
 
 				if (nomeTabela == nomeArray) {
+					jaValidou = true;
 					window.alert("Ja existe um nome como esse cadastrado!");
 					arrayTabela.pop();
 				}
+			}
+			
+			if (!jaValidou) {
+				document.getElementById("txtNome").value = "";
+				document.getElementById("txtCPF").value = "";
 			}
 
 			document.getElementById("tabelaClientes").innerHTML = constroiTabela();	

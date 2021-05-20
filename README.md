@@ -15,7 +15,7 @@ Nesse desafio desenvolvemos um programa em Javascript com propósito de fazer um
 HTML:
 
 
-**Esse código é o HMTL da página e nele mostra a criação de duas caixas com nome e cpf para receber valores e também um botão de "adicionar".**
+**O código HTML abaixo ele mostra a construção de dois elementos que é Nome e CPF. Esses elementos serão inseridos dentro de uma tabela apos de clicar no botão Adicionar ".**
 
 
 	<head>
@@ -45,26 +45,22 @@ HTML:
  
    Javascript:
     
-  **Esse array foi ele guarda os os dados seja o nome ou cpf que serão digitados nas caixas.**
+  **Nessa linha de código o ocorrido é que o var arrayTabela que sera responsável por inserir os dados tanto Cpf como Nome dentro da tabela. E a função de AdicionarLinha() ela sera capaz de verificar se esses dados que vão ser inseridos na tabela se estão combinando com as regras e caso sim serão adicinados **
 
   `var arrayTabela = [];`
   
-  **A função AdicionarLinha() vai validar se os dados digitados nas caixas se estão de acordo com as regras e depois vai  adicionar na tabela.**
-
   `function AdicionarLinha() { `
   
-  **A var cpf vai receber o cpf digitado e a var nome vai receber o nome.**
+  **Essas variáveis tanto CPF como Nome vão receber valores. E esse if ele é responsável por verificar se o valor digitado em algum dos campos é vazio.**
 
     var cpf = document.getElementById("txtCPF").value;
-		var nome = document.getElementById("txtNome").value;
+    var nome = document.getElementById("txtNome").value;
       
-  **Esse if ele valida se algum dos valores digitados é vazio .**
-
-  		if (nome.trim() == "" || cpf == "") {
-				window.alert("Insira um valor possivel!");
-			}
+    if (nome.trim() == "" || cpf == "") {
+	             window.alert("Insira um valor possivel!");
+	}
  
- **Caso os valores digitados nas caixas forem validos é criado um objeto com os dados recebidos e é criada a variável jaValidou para apagar os dados escritos se o valor for falso (false).**
+ **Com a criação da variável jaValidou que so é acionada no caso do valor ser falso (false)o contrario eles serão inseridos normalmente**  
   		
         else {
 
@@ -101,21 +97,20 @@ HTML:
 						arrayTabela.pop();
 					}
           
- ** Depois ter inserido um valor que ja existe na tabela e dar a mensagem de alerta muda os valores dos campos para o vazio.**
+ **Depois de ter inserido algum valor dos campos CPF ou Nome que ja consta existente na tabela ele não sera inserido e aparecerá uma mensagem de alerta e limpara  os valores did=gitados nesses campos. E dpois sera construida uma tabela depois de uma validação e finalizará com a função AdicionarLinha.**
+ 
        
   
     if (!jaValidou) {
 					document.getElementById("txtNome").value = "";
 					document.getElementById("txtCPF").value = "";
 				}
-          
- **Sera construida uma tabela depois da validção e finaliza a função AdicionarLinha .**
-
-  	document.getElementById("tabelaClientes").innerHTML = constroiTabela();
+    
+    document.getElementById("tabelaClientes").innerHTML = constroiTabela();
           			}
 		}
         
-**Essa função é acionada quando a nesssecidade de remover alguma linha através do "ID" dentro do array ou da tabela e ao clicar no botão "remover".
+**Essa função é acionada quando a nesssecidade de remover alguma linha através do "ID" dentro do array ou da tabela e ao clicar no botão "remover" a linha sera removida dentro da tabela.**
   
     function RemoverLinha(idLinha) {
 			arrayTabela.splice(idLinha, 1);

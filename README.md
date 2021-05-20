@@ -49,9 +49,9 @@ HTML:
 **Nessa linha de código o ocorrido é que o var arrayTabela que sera responsável por inserir os dados tanto Cpf como Nome dentro da tabela. E a função de AdicionarLinha() ela sera capaz de verificar se esses dados que vão ser inseridos na tabela se estão combinando com as regras e caso sim serão adicinados.**
 ```
 
-`var arrayTabela = [];`
+var arrayTabela = [];
 
-`function AdicionarLinha() { `
+function AdicionarLinha() { 
 
 ```
   

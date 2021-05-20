@@ -65,8 +65,8 @@ HTML:
  **Com a criação da variável jaValidou que so é acionada no caso do valor ser falso (false). Caso o contrario eles serão inseridos normalmente**  
   		
         else {
-
-				var tabela =
+              
+	      var tabela =
 				{
 					"id": arrayTabela.length,
 					"nome": nome,
@@ -76,12 +76,14 @@ HTML:
 				arrayTabela.push(tabela);
 			
 				var jaValidou = false;
+				
         
  **Esse código ele serve para validar se não há na tabela nenhum valor igual aos valores que serão inseridos caso tiver ele da uma mensagem de alerta mostrando que ja existe esse valor.**
   
   
     for (let i = 0; i < (arrayTabela.length - 1); i++) {
-					var cpfTabela = tabela.cpf;
+			
+			var cpfTabela = tabela.cpf;
 					var cpfArray = arrayTabela[i].cpf;
 					var nomeTabela = tabela.nome;
 					var nomeArray = arrayTabela[i].nome;
@@ -124,37 +126,37 @@ HTML:
 **E no final temos a função constroiTabela() que é criada atraves do vetor arrayTabela e o for para pegar cada item no array e trazer para tabela.**
 		
     function constroiTabela() {
-			var tabelaScript =  "<tr>" +
-									"<td>" +
-										"<strong>" +
-											"CPF" +
-										"</strong>" +
-									"</td>" +
-									"<td>" +
-										"<strong>" +
-											"NOME" +
-										"</strong>" +
-									"</td>" +
-									"<td>" +
-										"<strong>" +
-											"REMOVER" +
-										"<strong>" +
-									"</td>" +
-								"</tr>";
+         var tabelaScript =  "<tr>" +
+				    "<td>" +
+					"<strong>" +
+						"CPF" +
+					"</strong>" +
+				    "</td>" +
+				    "<td>" +
+					"<strong>" +
+						"NOME" +
+					"</strong>" +
+				    "</td>" +
+				    "<td>" +
+					"<strong>" +
+						"REMOVER" +
+					"<strong>" +
+				    "</td>" +
+				    "</tr>";
 
-			for (let i = 0; i < arrayTabela.length; i++) {
-				tabelaScript += "<tr id='linhaRemover" + i + "'>" +
-									"<td>" +
-										arrayTabela[i].cpf +
-									"</td>" +
-									"<td>" +
-										arrayTabela[i].nome +
-									"</td>" +
-									"<td>" +
-										"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
-									"</td>"
-								"</tr>";
-			}
+    for (let i = 0; i < arrayTabela.length; i++) {
+		tabelaScript += "<tr id='linhaRemover" + i + "'>" +
+				"<td>" +
+					arrayTabela[i].cpf +
+				"</td>" +
+				"<td>" +
+					arrayTabela[i].nome +
+				"</td>" +
+				"<td>" +
+					"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
+				"</td>"
+			"</tr>";
+}
 
 			return tabelaScript;
 		}

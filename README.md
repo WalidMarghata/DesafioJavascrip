@@ -51,7 +51,7 @@ HTML:
   
   `function AdicionarLinha() { `
   
-  **Essas variáveis tanto CPF como Nome vão receber valores. E esse if ele é responsável por verificar se o valor digitado em algum dos campos é vazio.**
+  **Essas variáveis tanto CPF como Nome vão receber valores. E o if ele é responsável por verificar se os valores digitados em algum dos campos é vazio.**
 
     var cpf = document.getElementById("txtCPF").value;
     var nome = document.getElementById("txtNome").value;

@@ -45,13 +45,15 @@ HTML:
  
    Javascript:
     
-  **Nessa linha de código o ocorrido é que o var arrayTabela que sera responsável por inserir os dados tanto Cpf como Nome dentro da tabela. E a função de AdicionarLinha() ela sera capaz de verificar se esses dados que vão ser inseridos na tabela se estão combinando com as regras e caso sim serão adicinados **
+
+**Nessa linha de código o ocorrido é que o var arrayTabela que sera responsável por inserir os dados tanto Cpf como Nome dentro da tabela. E a função de AdicionarLinha() ela sera capaz de verificar se esses dados que vão ser inseridos na tabela se estão combinando com as regras e caso sim serão adicinados.**
 
   `var arrayTabela = [];`
   
   `function AdicionarLinha() { `
   
-  **Essas variáveis tanto CPF como Nome vão receber valores. E o if ele é responsável por verificar se os valores digitados em algum dos campos é vazio.**
+  
+ **Essas variáveis tanto CPF como Nome vão receber valores. E o if ele é responsável por verificar se os valores digitados em algum dos campos é vazio.**
 
     var cpf = document.getElementById("txtCPF").value;
     var nome = document.getElementById("txtNome").value;
@@ -97,7 +99,7 @@ HTML:
 						arrayTabela.pop();
 					}
           
- **Depois de ter inserido algum valor dos campos CPF ou Nome que ja consta existente na tabela ele não sera inserido e aparecerá uma mensagem de alerta e limpara  os valores did=gitados nesses campos. E dpois sera construida uma tabela depois de uma validação e finalizará com a função AdicionarLinha.**
+**Depois de ter inserido algum valor dos campos CPF ou Nome que ja consta existente na tabela ele não sera inserido e aparecerá uma mensagem de alerta e limpara  os valores did=gitados nesses campos. E dpois sera construida uma tabela depois de uma validação e finalizará com a função AdicionarLinha.**
  
        
   

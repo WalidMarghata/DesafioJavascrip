@@ -64,7 +64,7 @@ HTML:
 				window.alert("Insira um valor possivel!");
 			}
  
- **Caso os valores digitados nas caixas forem validos é criado um objeto com os dados recebidos e é criada a variável jaValidou para apagar os dados escritos se o valor for verdadeiro (true).**
+ **Caso os valores digitados nas caixas forem validos é criado um objeto com os dados recebidos e é criada a variável jaValidou para apagar os dados escritos se o valor for falso (false).**
   		
         else {
 
@@ -104,7 +104,7 @@ HTML:
  ** Depois ter inserido um valor que ja existe na tabela e dar a mensagem de alerta muda os valores dos campos para o vazio.**
        
   
-    if (jaValidou) {
+    if (!jaValidou) {
 					document.getElementById("txtNome").value = "";
 					document.getElementById("txtCPF").value = "";
 				}

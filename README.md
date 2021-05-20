@@ -64,18 +64,18 @@ HTML:
  
  **Com a criação da variável jaValidou que so é acionada no caso do valor ser falso (false). Caso o contrario eles serão inseridos normalmente**  
   		
-        else {
+    else {
               
-	      var tabela =
-				{
-					"id": arrayTabela.length,
-					"nome": nome,
-					"cpf": cpf
-				}
+	 var tabela =
+		    {
+		      "id": arrayTabela.length,
+		      "nome": nome,
+		      "cpf": cpf
+		    }
 
-				arrayTabela.push(tabela);
-			
-				var jaValidou = false;
+		arrayTabela.push(tabela);
+
+		var jaValidou = false;
 				
         
  **Esse código ele serve para validar se não há na tabela nenhum valor igual aos valores que serão inseridos caso tiver ele da uma mensagem de alerta mostrando que ja existe esse valor.**
@@ -83,32 +83,32 @@ HTML:
   
     for (let i = 0; i < (arrayTabela.length - 1); i++) {
 			
-			var cpfTabela = tabela.cpf;
-					var cpfArray = arrayTabela[i].cpf;
-					var nomeTabela = tabela.nome;
-					var nomeArray = arrayTabela[i].nome;
+	var cpfTabela = tabela.cpf;
+			var cpfArray = arrayTabela[i].cpf;
+			var nomeTabela = tabela.nome;
+			var nomeArray = arrayTabela[i].nome;
 
-					if (cpfTabela == cpfArray) {
-						jaValidou = true;
-						window.alert("Ja existe um nome com esse CPF cadastrado!");
-						arrayTabela.pop();
-						break;
-					}
+			if (cpfTabela == cpfArray) {
+				jaValidou = true;
+				window.alert("Ja existe um nome com esse CPF cadastrado!");
+				arrayTabela.pop();
+				break;
+			}
 
-					if (nomeTabela == nomeArray) {
-						jaValidou = true;
-						window.alert("Ja existe um nome como esse cadastrado!");
-						arrayTabela.pop();
-					}
-          
+			if (nomeTabela == nomeArray) {
+				jaValidou = true;
+				window.alert("Ja existe um nome como esse cadastrado!");
+				arrayTabela.pop();
+			}
+
 **Depois de ter inserido algum valor dos campos CPF ou Nome que ja consta existente na tabela, ele não sera inserido e aparecerá uma mensagem de alerta, e limpara  os valores digitados nesses campos. E dpois sera construida uma tabela depois de uma validação e finalizará com a função AdicionarLinha.**
  
        
   
     if (!jaValidou) {
-					document.getElementById("txtNome").value = "";
-					document.getElementById("txtCPF").value = "";
-				}
+			document.getElementById("txtNome").value = "";
+			document.getElementById("txtCPF").value = "";
+		      }
     
     document.getElementById("tabelaClientes").innerHTML = constroiTabela();
           			}
@@ -117,49 +117,48 @@ HTML:
 **Essa função é acionada quando a nesssecidade de remover alguma linha através do "ID" dentro do array ou da tabela e ao clicar no botão "remover" a linha sera removida dentro da tabela.**
   
     function RemoverLinha(idLinha) {
-			arrayTabela.splice(idLinha, 1);
-			document.getElementById("linhaRemover" + idLinha).remove();
-			document.getElementById("tabelaClientes").innerHTML = constroiTabela();
-		}
+	arrayTabela.splice(idLinha, 1);
+	document.getElementById("linhaRemover" + idLinha).remove();
+	document.getElementById("tabelaClientes").innerHTML = constroiTabela();
+    }
     
   			
 **E no final temos a função constroiTabela() que é criada atraves do vetor arrayTabela e o for para pegar cada item no array e trazer para tabela.**
 		
     function constroiTabela() {
-         var tabelaScript =  "<tr>" +
-				    "<td>" +
-					"<strong>" +
-						"CPF" +
-					"</strong>" +
-				    "</td>" +
-				    "<td>" +
-					"<strong>" +
-						"NOME" +
-					"</strong>" +
-				    "</td>" +
-				    "<td>" +
-					"<strong>" +
-						"REMOVER" +
-					"<strong>" +
-				    "</td>" +
-				    "</tr>";
+    var tabelaScript =  "<tr>" +
+	    "<td>" +
+		"<strong>" +
+			"CPF" +
+		"</strong>" +
+	    "</td>" +
+	    "<td>" +
+		"<strong>" +
+			"NOME" +
+		"</strong>" +
+	    "</td>" +
+	    "<td>" +
+		"<strong>" +
+			"REMOVER" +
+		"<strong>" +
+	    "</td>" +
+	    "</tr>";
 
     for (let i = 0; i < arrayTabela.length; i++) {
-		tabelaScript += "<tr id='linhaRemover" + i + "'>" +
-				"<td>" +
-					arrayTabela[i].cpf +
-				"</td>" +
-				"<td>" +
-					arrayTabela[i].nome +
-				"</td>" +
-				"<td>" +
-					"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
-				"</td>"
-			"</tr>";
-}
-
-			return tabelaScript;
-		}
+      tabelaScript += "<tr id='linhaRemover" + i + "'>" +
+	"<td>" +
+		arrayTabela[i].cpf +
+	"</td>" +
+	"<td>" +
+		arrayTabela[i].nome +
+	"</td>" +
+	"<td>" +
+		"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
+	"</td>"
+        "</tr>";
+      }
+      return tabelaScript;
+     }
 
 
 

@@ -3,7 +3,7 @@
 
 ##  Introdução:
 
-Nesse desafio desenvolvemos um programa em Javascript com propósito de fazer um cadastro de CPF e Nome. Com o botão adicionar, esses dados foram inseridos a uma tabela. Essa tabela somente aceita valores não repetidos, tanto na parte do Nome como a de CPF. Em cada linha desta tabela ha um botão para remover dados inseridos caso seja necessário. Durante o desenvolvimento do desafio tivemos muitas dúvidas que foram todas resolvidas dentro da própria equipe, e isso gerou uma grande cooperação e aumento o espirito de equipe entre os envolvidos. O desafio foi de grande valia, pois uniu a teoria e a prática a respeito dos conceitos da linguagem Javascript.
+Nesse desafio desenvolvemos um programa em Javascript com propósito de fazer um cadastro de CPF e Nome. Com o botão adicionar, esses dados foram inseridos a uma tabela. Essa tabela somente aceita valores não repetidos, tanto na parte do Nome como a de CPF. Em cada linha desta tabela ha um botão para remover dados inseridos caso seja necessário. Durante o desenvolvimento do desafio tivemos muitas dúvidas que foram todas resolvidas dentro da própria equipe, e isso gerou uma grande cooperação e aumento do espirito de equipe entre os envolvidos. O desafio foi de grande valia, pois uniu a teoria e a prática a respeito dos conceitos da linguagem Javascript.
 
 
     

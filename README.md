@@ -60,7 +60,7 @@ HTML:
 	             window.alert("Insira um valor possivel!");
 	}
  
- **Com a criação da variável jaValidou que so é acionada no caso do valor ser falso (false)o contrario eles serão inseridos normalmente**  
+ **Com a criação da variável jaValidou que so é acionada no caso do valor ser falso (false). Caso o contrario eles serão inseridos normalmente**  
   		
         else {
 

@@ -99,7 +99,7 @@ HTML:
 						arrayTabela.pop();
 					}
           
-**Depois de ter inserido algum valor dos campos CPF ou Nome que ja consta existente na tabela ele não sera inserido e aparecerá uma mensagem de alerta e limpara  os valores did=gitados nesses campos. E dpois sera construida uma tabela depois de uma validação e finalizará com a função AdicionarLinha.**
+**Depois de ter inserido algum valor dos campos CPF ou Nome que ja consta existente na tabela, ele não sera inserido e aparecerá uma mensagem de alerta, e limpara  os valores digitados nesses campos. E dpois sera construida uma tabela depois de uma validação e finalizará com a função AdicionarLinha.**
  
        
   

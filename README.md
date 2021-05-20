@@ -72,17 +72,17 @@ if (nome.trim() == "" || cpf == "") {
 
 else {
 
- var tabela =
-	    {
-	      "id": arrayTabela.length,
-	      "nome": nome,
-	      "cpf": cpf
-	    }
+var tabela =
+    {
+      "id": arrayTabela.length,
+      "nome": nome,
+      "cpf": cpf
+    }
 
-	arrayTabela.push(tabela);
+arrayTabela.push(tabela);
 
-	var jaValidou = false;
-	
+var jaValidou = false;
+
 ```
 				
         
@@ -93,22 +93,22 @@ else {
 for (let i = 0; i < (arrayTabela.length - 1); i++) {
 
 var cpfTabela = tabela.cpf;
-		var cpfArray = arrayTabela[i].cpf;
-		var nomeTabela = tabela.nome;
-		var nomeArray = arrayTabela[i].nome;
+var cpfArray = arrayTabela[i].cpf;
+var nomeTabela = tabela.nome;
+var nomeArray = arrayTabela[i].nome;
 
-		if (cpfTabela == cpfArray) {
-			jaValidou = true;
-			window.alert("Ja existe um nome com esse CPF cadastrado!");
-			arrayTabela.pop();
-			break;
-		}
+if (cpfTabela == cpfArray) {
+	jaValidou = true;
+	window.alert("Ja existe um nome com esse CPF cadastrado!");
+	arrayTabela.pop();
+	break;
+}
 
-		if (nomeTabela == nomeArray) {
-			jaValidou = true;
-			window.alert("Ja existe um nome como esse cadastrado!");
-			arrayTabela.pop();
-		}
+if (nomeTabela == nomeArray) {
+	jaValidou = true;
+	window.alert("Ja existe um nome como esse cadastrado!");
+	arrayTabela.pop();
+}
 
 ```
 
@@ -118,13 +118,13 @@ var cpfTabela = tabela.cpf;
 ```
 
 if (!jaValidou) {
-		document.getElementById("txtNome").value = "";
-		document.getElementById("txtCPF").value = "";
-	      }
+document.getElementById("txtNome").value = "";
+document.getElementById("txtCPF").value = "";
+}
 
 document.getElementById("tabelaClientes").innerHTML = constroiTabela();
-			}
 	}
+}
 
 ```
 
@@ -146,33 +146,33 @@ document.getElementById("tabelaClientes").innerHTML = constroiTabela();
 
 function constroiTabela() {
 var tabelaScript =  "<tr>" +
-    "<td>" +
-	"<strong>" +
-		"CPF" +
-	"</strong>" +
-    "</td>" +
-    "<td>" +
-	"<strong>" +
-		"NOME" +
-	"</strong>" +
-    "</td>" +
-    "<td>" +
-	"<strong>" +
-		"REMOVER" +
-	"<strong>" +
-    "</td>" +
-    "</tr>";
+"<td>" +
+"<strong>" +
+	"CPF" +
+"</strong>" +
+"</td>" +
+"<td>" +
+"<strong>" +
+	"NOME" +
+"</strong>" +
+"</td>" +
+"<td>" +
+"<strong>" +
+	"REMOVER" +
+"<strong>" +
+"</td>" +
+"</tr>";
 
 for (let i = 0; i < arrayTabela.length; i++) {
 tabelaScript += "<tr id='linhaRemover" + i + "'>" +
 "<td>" +
-	arrayTabela[i].cpf +
+arrayTabela[i].cpf +
 "</td>" +
 "<td>" +
-	arrayTabela[i].nome +
+arrayTabela[i].nome +
 "</td>" +
 "<td>" +
-	"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
+"<input type='button' id='buttonRemover" + i + "' value='Remover' onclick='RemoverLinha(" + i + ")' />" +
 "</td>"
 "</tr>";
 }

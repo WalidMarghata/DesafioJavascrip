@@ -15,7 +15,7 @@ Nesse desafio desenvolvemos um programa em Javascript com propósito de fazer um
 HTML:
 
 
-**O código HTML abaixo ele mostra a construção de dois elementos que é Nome e CPF. Esses elementos serão inseridos dentro de uma tabela apos de clicar no botão Adicionar ".**
+**O código HTML abaixo ele mostra a construção de dois campos que é Nome e CPF. Esses elementos serão inseridos dentro de uma tabela apos de clicar no botão Adicionar .**
 
 
 	<head>
